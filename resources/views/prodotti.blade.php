@@ -25,8 +25,16 @@
         <section>
             @foreach($data as $value ) 
                 @if($value['tipo'] === 'lunga')
-                    <div class="pasta">
-                        <img src="{{ $value['src'] }}" alt="">
+                    <div class="col_3">
+                        <div class="item">
+                            <div class="overlay">
+                                <div class="info">
+                                    <h5>{{ $value['titolo'] }}</h5>
+                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
+                                </div>
+                            </div>
+                            <img class="bg_pasta" src="{{ $value['src'] }}" alt="">
+                        </div>
                     </div>
                 @endif
             @endforeach
@@ -36,8 +44,16 @@
         <section>
             @foreach($data as $value ) 
                 @if($value['tipo'] === 'corta')
-                    <div class="pasta">
-                        <img src="{{ $value['src'] }}" alt="">
+                    <div class="col_3">
+                        <div class="item">
+                            <div class="overlay">
+                                <div class="info">
+                                    <h5>{{ $value['titolo'] }}</h5>
+                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
+                                </div>
+                            </div>
+                            <img class="bg_pasta" src="{{ $value['src'] }}" alt="">
+                        </div>
                     </div>
                 @endif
             @endforeach
@@ -47,8 +63,16 @@
         <section>
             @foreach($data as $value )
                 @if($value['tipo'] === 'cortissima')
-                    <div class="pasta">
-                        <img src="{{ $value['src'] }}" alt="">
+                    <div class="col_3">
+                        <div class="item">
+                        <div class="overlay">
+                                    <div class="info">
+                                        <h5>{{ $value['titolo'] }}</h5>
+                                        <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
+                                    </div>
+                                </div>
+                                <img class="bg_pasta" src="{{ $value['src'] }}" alt="">
+                        </div>
                     </div>
                 @endif
             @endforeach
