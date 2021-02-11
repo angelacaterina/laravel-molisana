@@ -1,0 +1,19 @@
+header {
+    nav{
+        height: 70px;
+        align-items: center;
+        background-color: #B1D281;
+        a{
+            font-size: 16px;
+            color: #333338;
+            text-decoration: none;
+        }
+        a:not(:last-child){
+            padding-right: 70px;    
+        }
+        a:active,
+        a:hover{
+        color: #002D75;       
+        }
+    }
+}

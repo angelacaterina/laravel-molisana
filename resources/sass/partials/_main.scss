@@ -1,0 +1,22 @@
+main#main_content_prodotti{
+    background-image: url('/img/fondo-pag-speciali.jpg');
+    h2{
+        margin: 10px 0;
+        text-align: center;
+        font-size: 34px;
+    }
+    section{
+        width: 100%;
+        display: flex;
+        justify-content: start;
+        flex-wrap: wrap;
+        
+        div.pasta{
+            width: calc(100% / 3);
+            img{
+                width: 100%;
+            }
+
+        }
+    }  
+}

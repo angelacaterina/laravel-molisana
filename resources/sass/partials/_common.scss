@@ -1,0 +1,36 @@
+html, body {
+    background-color: #fff;
+    color: #636b6f;
+    font-family: 'Nunito', sans-serif;
+    font-weight: 200;
+    height: 100vh;
+    margin: 0;
+}
+.container{
+    width: 84%;
+    height: 100%;
+    margin: 0 auto;
+}
+.container_main {
+    width: 100%;
+    height: 100%;
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.d-flex{
+    display: flex;
+}
+.j_center{
+    justify-content: center;
+}
+.j_around{
+    justify-content: space-around;
+}
+.t_center{
+    text-align: center;
+}
+.main-height {
+    height: 64vh;
+}
