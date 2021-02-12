@@ -1,3 +1,7 @@
+main#main_content_home{
+    height: 63vh;
+}
+
 main#main_content_prodotti{
     background-image: url('/img/fondo-pag-speciali.jpg');
     padding: 20px 0;
@@ -59,4 +63,8 @@ main#main_content_prodotti{
             }
         }
     }  
+}
+
+main#main_content_contatti{
+    height: 63vh;
 }

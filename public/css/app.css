@@ -60,14 +60,24 @@ header nav a {
   text-decoration: none;
 }
 
-header nav a:not(:last-child) {
-  padding-right: 70px;
+header nav .active {
+  color: #002D75;
+  font-weight: 600;
+  border-bottom: 3px solid #002D75;
 }
 
-header nav a:active,
+header nav a:not(:last-child) {
+  margin-right: 70px;
+}
+
 header nav a:hover {
   color: #002D75;
   font-weight: 600;
+  border-bottom: 3px solid #002D75;
+}
+
+main#main_content_home {
+  height: 63vh;
 }
 
 main#main_content_prodotti {
@@ -141,7 +151,14 @@ main#main_content_prodotti section div.col_3 .item:hover .overlay {
   cursor: pointer;
 }
 
+main#main_content_contatti {
+  height: 63vh;
+}
+
 footer#site_footer {
   background: #F5F5F1;
+  text-align: center;
+  font-size: 13px;
+  padding: 30px;
 }
 
