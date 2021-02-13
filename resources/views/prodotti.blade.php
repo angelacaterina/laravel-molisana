@@ -14,17 +14,7 @@
         <section>
             @foreach($data as $value ) 
                 @if($value['tipo'] === 'lunga')
-                    <div class="col_3">
-                        <div class="item">
-                            <div class="overlay">
-                                <div class="info">
-                                    <h5>{{ $value['titolo'] }}</h5>
-                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
-                                </div>
-                            </div>
-                            <img class="bg_pasta" src="{{ $value['src'] }}" alt="">
-                        </div>
-                    </div>
+                    @include('partials.card_prodotti')
                 @endif
             @endforeach
         </section>
@@ -33,17 +23,7 @@
         <section>
             @foreach($data as $value ) 
                 @if($value['tipo'] === 'corta')
-                    <div class="col_3">
-                        <div class="item">
-                            <div class="overlay">
-                                <div class="info">
-                                    <h5>{{ $value['titolo'] }}</h5>
-                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
-                                </div>
-                            </div>
-                            <img class="bg_pasta" src="{{ $value['src'] }}" alt="">
-                        </div>
-                    </div>
+                    @include('partials.card_prodotti')
                 @endif
             @endforeach
         </section>
@@ -52,17 +32,7 @@
         <section>
             @foreach($data as $value )
                 @if($value['tipo'] === 'cortissima')
-                    <div class="col_3">
-                        <div class="item">
-                            <div class="overlay">
-                                <div class="info">
-                                    <h5>{{ $value['titolo'] }}</h5>
-                                    <img class="icon" src="{{ asset('img/icon.svg') }}" alt="">
-                                </div>
-                            </div>
-                            <img class="bg_pasta" src="{{ $value['src'] }}" alt="">
-                        </div>
-                    </div>
+                    @include('partials.card_prodotti')
                 @endif
             @endforeach
         </section>

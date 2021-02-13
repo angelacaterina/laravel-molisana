@@ -3,26 +3,34 @@ main#main_content_home{
 }
 
 main#main_content_prodotti{
-    background-image: url('/img/fondo-pag-speciali.jpg');
+    // background-image: url('/img/fondo-pag-speciali.jpg');
+    background-color: #DAEDF3;
     padding: 20px 0;
     h2{
         padding: 20px 0;
         text-align: center;
-        color: #002D75; 
-        background-color: aliceblue;
-        font-size: 34px;
+        text-transform: uppercase;
+        // color: #002D75; 
+        color: #404040;
+        // background-color: aliceblue;
+        font-size: 70px;
+        font-weight: 300;
+        letter-spacing: 4px;
+        font-family: 'Teko', sans-serif;
     }
     section{
-        width: 100%;
+        width: 99%;
+        margin: 20px auto;
         display: flex;
         justify-content: start;
         flex-wrap: wrap;
-        
         div.col_3{
             width: calc(100% / 3);
-            padding: 20px;
+            padding: 4px;
             .item{
+                width: 100%;
                 position: relative;
+                overflow: hidden;
                 .overlay{
                     opacity: 0;
                     width: 100%;
@@ -31,35 +39,63 @@ main#main_content_prodotti{
                     top: 0;
                     left: 0;
                     .info{
-                        height: 60%;
+                        padding: 10px;
+                        width: 90%;
+                        height: 63%;
                         display: flex;
                         flex-direction: column;
                         align-items: center;
                         justify-content: space-between;
-                        padding: 10px;
-                        width: 90%;
                         box-sizing: border-box;
                         position: absolute;
                         top: 50%;
                         left: 50%;
-                        transform: translate(-50%, -50%);
-                        img.icon{
-                            width: 40px;
-                        }
+                        transform: translate(-50%, -43%);
                         h5{
-                            // margin-top: 17px;
-                            font-size: 19px;
+                            a.title{
+                                margin-bottom: 17px;
+                                font-size: 22px;
+                                color: #001942;
+                                font-weight: 400;
+                                font-family: 'Playfair Display', serif;
+                                hr{
+                                    width: 13px;
+                                    border: 1px solid #001942;
+                                    margin: 2px auto;
+                                }
+                            }
+                        }
+                        a.icona{
+                            svg.mk-svg-icon{
+                                fill: #7C8797; //fill serve a cambiare colore a un file svg, non funzione se lo uso con img
+                                
+                            }
+                            &:hover svg.mk-svg-icon{
+                                fill: #001942;
+                            }
+                            // img{
+                            //     width: 32px;
+                            // }
                         }
                     }
                 }
                 img.bg_pasta{
                     width: 100%;
+                    display: block;
                 }
-            }
-            .item:hover .overlay {
-                opacity: 1;
-                transition: 1s ease;
-                cursor: pointer;
+                &:hover img.bg_pasta {
+                    z-index: 2;
+                    transition: transform 0.5s ease;
+                    transform: scale(1.13);
+                }
+                &:hover .overlay {
+                    z-index: 3;
+                    opacity: 1;
+                    transition: 0.5s ease;
+                    cursor: pointer;
+                    opacity: 0.8;
+                    background-color: #F1F8FA;
+                }
             }
         }
     }  

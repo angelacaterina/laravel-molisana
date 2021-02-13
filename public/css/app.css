@@ -48,29 +48,29 @@ body {
   height: 64vh;
 }
 
-header nav {
+header#site_header nav {
   height: 70px;
   align-items: center;
   background-color: #B1D281;
 }
 
-header nav a {
+header#site_header nav a {
   font-size: 16px;
   color: #333338;
   text-decoration: none;
 }
 
-header nav .active {
+header#site_header nav a:hover {
   color: #002D75;
   font-weight: 600;
   border-bottom: 3px solid #002D75;
 }
 
-header nav a:not(:last-child) {
+header#site_header nav a:not(:last-child) {
   margin-right: 70px;
 }
 
-header nav a:hover {
+header#site_header nav a.active {
   color: #002D75;
   font-weight: 600;
   border-bottom: 3px solid #002D75;
@@ -81,20 +81,24 @@ main#main_content_home {
 }
 
 main#main_content_prodotti {
-  background-image: url("/img/fondo-pag-speciali.jpg");
+  background-color: #DAEDF3;
   padding: 20px 0;
 }
 
 main#main_content_prodotti h2 {
   padding: 20px 0;
   text-align: center;
-  color: #002D75;
-  background-color: aliceblue;
-  font-size: 34px;
+  text-transform: uppercase;
+  color: #404040;
+  font-size: 70px;
+  font-weight: 300;
+  letter-spacing: 4px;
+  font-family: "Teko", sans-serif;
 }
 
 main#main_content_prodotti section {
-  width: 100%;
+  width: 99%;
+  margin: 20px auto;
   display: flex;
   justify-content: start;
   flex-wrap: wrap;
@@ -102,11 +106,13 @@ main#main_content_prodotti section {
 
 main#main_content_prodotti section div.col_3 {
   width: calc(100% / 3);
-  padding: 20px;
+  padding: 4px;
 }
 
 main#main_content_prodotti section div.col_3 .item {
+  width: 100%;
   position: relative;
+  overflow: hidden;
 }
 
 main#main_content_prodotti section div.col_3 .item .overlay {
@@ -119,36 +125,60 @@ main#main_content_prodotti section div.col_3 .item .overlay {
 }
 
 main#main_content_prodotti section div.col_3 .item .overlay .info {
-  height: 60%;
+  padding: 10px;
+  width: 90%;
+  height: 63%;
   display: flex;
   flex-direction: column;
   align-items: center;
   justify-content: space-between;
-  padding: 10px;
-  width: 90%;
   box-sizing: border-box;
   position: absolute;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translate(-50%, -43%);
 }
 
-main#main_content_prodotti section div.col_3 .item .overlay .info img.icon {
-  width: 40px;
+main#main_content_prodotti section div.col_3 .item .overlay .info h5 a.title {
+  margin-bottom: 17px;
+  font-size: 22px;
+  color: #001942;
+  font-weight: 400;
+  font-family: "Playfair Display", serif;
 }
 
-main#main_content_prodotti section div.col_3 .item .overlay .info h5 {
-  font-size: 19px;
+main#main_content_prodotti section div.col_3 .item .overlay .info h5 a.title hr {
+  width: 13px;
+  border: 1px solid #001942;
+  margin: 2px auto;
+}
+
+main#main_content_prodotti section div.col_3 .item .overlay .info a.icona svg.mk-svg-icon {
+  fill: #7C8797;
+}
+
+main#main_content_prodotti section div.col_3 .item .overlay .info a.icona:hover svg.mk-svg-icon {
+  fill: #001942;
 }
 
 main#main_content_prodotti section div.col_3 .item img.bg_pasta {
   width: 100%;
+  display: block;
+}
+
+main#main_content_prodotti section div.col_3 .item:hover img.bg_pasta {
+  z-index: 2;
+  transition: transform 0.5s ease;
+  transform: scale(1.13);
 }
 
 main#main_content_prodotti section div.col_3 .item:hover .overlay {
+  z-index: 3;
   opacity: 1;
-  transition: 1s ease;
+  transition: 0.5s ease;
   cursor: pointer;
+  opacity: 0.8;
+  background-color: #F1F8FA;
 }
 
 main#main_content_contatti {

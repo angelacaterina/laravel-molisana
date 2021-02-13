@@ -1,4 +1,4 @@
-header {
+header#site_header {
     nav{
         height: 70px;
         align-items: center;
@@ -7,21 +7,19 @@ header {
             font-size: 16px;
             color: #333338;
             text-decoration: none;
-            
+            &:hover{
+                color: #002D75; 
+                font-weight: 600; 
+                border-bottom: 3px solid #002D75;     
+            }
+            &:not(:last-child){
+                margin-right: 70px;    
+            }
+            &.active{
+                color: #002D75; 
+                font-weight: 600; 
+                border-bottom: 3px solid #002D75;     
+            }
         }
-        .active{
-            color: #002D75; 
-            font-weight: 600; 
-            border-bottom: 3px solid #002D75;     
-        }
-        a:not(:last-child){
-            margin-right: 70px;    
-        }
-        a:hover{
-            color: #002D75; 
-            font-weight: 600; 
-            border-bottom: 3px solid #002D75;     
-        }
-        
     }
 }
